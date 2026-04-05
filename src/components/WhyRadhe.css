@@ -58,7 +58,8 @@
 .why__mini-logo {
   height: 24px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .why__card h3 {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 import './Loader.css';
 
 export default function Loader() {

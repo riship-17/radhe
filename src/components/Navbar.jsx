@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMagnet from '../hooks/useMagnet';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 import './Navbar.css';
 
 const navLinks = [

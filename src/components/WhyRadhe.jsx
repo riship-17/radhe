@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import useReveal from '../hooks/useReveal';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 import './WhyRadhe.css';
 
 const staggerContainer = {

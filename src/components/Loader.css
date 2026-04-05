@@ -21,7 +21,8 @@
 .loader__logo {
   width: 64px;
   height: auto;
-  filter: brightness(0) invert(1);
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .loader__wordmark {
