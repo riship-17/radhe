@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --yale: #134074;
+  --oxford: #13315c;
+  --prussian: #0b2545;
+  --powder: #8da9c4;
+  --mint: #eef4ed;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --glass-light: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(141, 169, 196, 0.3);
+  --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: var(--prussian);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--prussian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yale);
+  border-radius: 3px;
+}
+
+/* ─── Typography ─── */
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-dm { font-family: 'DM Sans', sans-serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+
+/* ─── Keyframes ─── */
+@keyframes kenBurns {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes strokeDraw {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes loaderFadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; pointer-events: none; }
+}
+
+@keyframes scrollDotDrop {
+  0% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(12px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes pinPulse {
+  0% { r: 4; opacity: 1; }
+  50% { r: 8; opacity: 0.4; }
+  100% { r: 4; opacity: 1; }
+}
+
+@keyframes starPop {
+  0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+  60% { transform: scale(1.2) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(19, 64, 116, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(19, 64, 116, 0.7); }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── Hide custom cursor on touch ─── */
+@media (pointer: coarse) {
+  .custom-cursor { display: none !important; }
+}
+
+/* ─── Container ─── */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 60px);
+}
+
+/* ─── Section Spacing ─── */
+section {
+  padding: clamp(60px, 10vw, 120px) 0;
+}
+
+/* ─── Swiper Custom Pagination ─── */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--powder) !important;
+  opacity: 0.5 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: var(--yale) !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+}

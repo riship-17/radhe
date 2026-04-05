@@ -1,0 +1,94 @@
+.why {
+  background: var(--mint);
+  padding: 120px 0;
+}
+
+.why__title {
+  color: var(--prussian);
+  font-size: clamp(32px, 4vw, 40px);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.why__bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why__card {
+  background: var(--white);
+  border: 0.5px solid var(--powder);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(11, 37, 69, 0.08);
+}
+
+.why__card--span2 {
+  grid-column: span 2;
+  background: linear-gradient(to bottom right, var(--white), #f8fbf8);
+}
+
+.why__card--kohler {
+  background: var(--prussian);
+  border: none;
+}
+
+.why__card--kohler h3,
+.why__card--kohler p {
+  color: var(--white);
+}
+
+.why__card--kohler p {
+  opacity: 0.8;
+}
+
+.why__card-icon {
+  margin-bottom: 24px;
+}
+
+.why__mini-logo {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.why__card h3 {
+  color: var(--yale);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.why__card p {
+  color: var(--oxford);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pinPulseAnim {
+  animation: pinPulse 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@media (max-width: 900px) {
+  .why__bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why__bento {
+    grid-template-columns: 1fr;
+  }
+  .why__card--span2 {
+    grid-column: span 1;
+  }
+}

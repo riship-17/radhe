@@ -1,0 +1,152 @@
+.kohler {
+  background: var(--prussian);
+  position: relative;
+  overflow: hidden;
+  padding: 140px 0;
+  display: flex;
+  align-items: center;
+}
+
+.kohler__noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kohler__watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 15vw, 160px);
+  color: var(--white);
+  opacity: 0.04;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  font-weight: 600;
+  user-select: none;
+}
+
+.kohler__inner {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kohler__partnership {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.kohler__logo {
+  height: 56px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.kohler__cross {
+  color: var(--powder);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.kohler__brand {
+  color: var(--white);
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.kohler__subheading {
+  color: var(--powder);
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.kohler__title {
+  color: var(--white);
+  font-size: clamp(36px, 5vw, 50px);
+  margin-bottom: 24px;
+}
+
+.kohler__body {
+  color: #ccc;
+  font-weight: 300;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.kohler__benefits {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.kohler__benefit-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--powder);
+  padding: 32px 24px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.kohler__benefit-card h4 {
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.kohler__benefit-card p {
+  color: var(--powder);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.kohler__action {
+  margin-top: 10px;
+}
+
+.kohler__btn {
+  display: inline-block;
+  background: var(--yale);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.kohler__btn:hover {
+  animation: glowPulse 2s infinite;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .kohler__partnership {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .kohler__benefits {
+    flex-direction: column;
+  }
+}

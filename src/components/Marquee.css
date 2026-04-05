@@ -1,0 +1,45 @@
+.marquee {
+  background: var(--prussian);
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(141, 169, 196, 0.2);
+  border-bottom: 1px solid rgba(141, 169, 196, 0.2);
+}
+
+.marquee__track {
+  display: inline-flex;
+  animation: marqueeScroll 24s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__content {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.marquee__content span {
+  color: var(--powder);
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.marquee__diamond {
+  width: 6px;
+  height: 6px;
+  background: var(--yale);
+  transform: rotate(45deg);
+  margin: 0 40px;
+}
+
+.marquee__logo {
+  height: 16px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}

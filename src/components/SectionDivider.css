@@ -1,0 +1,29 @@
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  opacity: 0.6;
+}
+
+.section-divider__line {
+  flex: 1;
+  height: 1px;
+  background: var(--powder);
+}
+
+.section-divider__center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-divider__label {
+  color: var(--powder);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
